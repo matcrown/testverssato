@@ -284,106 +284,106 @@ const scriptURL = 'https://script.google.com/macros/s/AKfycbxuLxn-bfIWiVAOPPNrED
 
 // BANCO DE 100 PREGUNTAS COMPLETO
 const bancoPreguntas = [
-    { p: "Si el local está lleno y hay pocos vendedores:", c: "Tomo el mando, asigno clientes y acelero el cierre.", s: "Saludo a todos con alegría para que no se desesperen.", m: "Me enfoco en facturar rápido para que no haya errores.", f: "Mantengo mi ritmo habitual para no estresarme." },
-    { p: "Un cliente dice que la ropa de la competencia es mejor:", c: "Le explico con autoridad por qué Verssato es superior.", s: "Le sonrío y trato de ganar su confianza con carisma.", m: "Le doy especificaciones técnicas de nuestra tela y calidad.", f: "Escucho sin decir mucho para no discutir." },
-    { p: "Faltan 10 minutos para cerrar y llega un cliente:", c: "Lo atiendo rápido pero enfocado en que compre ya.", s: "Lo recibo con la mejor energía sin importar la hora.", m: "Le informo los horarios y trato de que sea breve.", f: "Le digo que ya estamos cerrando para evitar líos." },
-    { p: "Al encontrar una falla en el inventario:", c: "Busco al responsable y exijo una explicación.", s: "Trato de resolverlo sin que se sienta tensión en el equipo.", m: "Hago un reporte detallado paso a paso de la diferencia.", f: "Espero a que el supervisor lo note por sí mismo." },
-    { p: "Cuando un cliente no se decide por una prenda:", c: "Le doy un ultimátum persuasivo para cerrar la venta.", s: "Le digo lo bien que se le ve y lo animo emocionalmente.", m: "Le explico las ventajas de costo-beneficio del producto.", f: "Le dejo solo para que piense con tranquilidad." },
-    { p: "Tu jefe te pide cambiar la exhibición de vitrina ahora:", c: "Lo hago de inmediato y a mi manera para que quede mejor.", s: "Pido ayuda a mis compañeros para hacerlo divertido.", m: "Mido los espacios y sigo el manual de marca.", f: "Lo hago despacio, esperando terminar mi turno." },
-    { p: "Un compañero está distraído con el celular en el trabajo:", c: "Le llamo la atención directamente.", s: "Le hago una broma para que guarde el teléfono.", m: "Lo registro mentalmente para informar en mi reporte.", f: "No digo nada para no ganarme problemas." },
-    { p: "Llegó mercadería nueva en cajas pesadas:", c: "Empiezo a cargar y ordeno dónde poner cada caja.", s: "Animo al grupo para terminar rápido con música.", m: "Verifico el packing list minuciosamente.", f: "Espero a que me digan exactamente qué mover." },
-    { p: "Un cliente pide un cambio sin tener el ticket:", c: "Le niego el cambio firmemente según la regla.", s: "Busco una solución creativa para que no se enoje.", m: "Consulto el sistema para rastrear la venta.", f: "Llamo al encargado de inmediato." },
-    { p: "La meta de venta diaria está muy lejos de cumplirse:", c: "Salgo a la puerta a captar gente con fuerza.", s: "Hago dinámicas para subir el ánimo del grupo.", m: "Analizo qué artículos no se han movido.", f: "Acepto que es un día bajo y espero mañana." },
-    { p: "Te ofrecen una capacitación un domingo por la mañana:", c: "Asisto para ser el mejor vendedor.", s: "Voy por compartir con el equipo.", m: "Asisto por el conocimiento técnico.", f: "Pongo una excusa, es mi descanso." },
-    { p: "Un cliente se queja del desorden en tienda:", c: "Empiezo a ordenar con agresividad comercial.", s: "Pido disculpas y arreglo lo que el cliente ve.", m: "Analizo por qué el proceso de orden falló.", f: "Asiento con la cabeza y sigo en lo mío." },
-    { p: "Recibes una crítica fuerte de tu superior:", c: "Acepto el reto y prometo superar expectativas.", s: "Trato de explicarle para que no se enoje.", m: "Tomo notas para corregir el error exacto.", f: "Me siento mal y me desmotivo." },
-    { p: "Se te asigna limpiar los baños de la tienda:", c: "Lo hago rápido para volver a las ventas.", s: "Lo hago bromeando para no aburrirme.", m: "Lo dejo impecable con los químicos correctos.", f: "Trato de evitar la tarea." },
-    { p: "Ves que alguien está intentando robar una prenda:", c: "Lo intercepto con autoridad de inmediato.", s: "Llamo la atención de forma sutil.", m: "Aviso a seguridad y sigo el protocolo.", f: "Me pongo nervioso y no reacciono." },
-    { p: "El cliente quiere algo que no hay en stock:", c: "Le vendo lo más parecido, no se va vacío.", s: "Le pido su contacto para avisarle luego.", m: "Le explico detalladamente cuándo llega.", f: "Le digo simplemente que no hay." },
-    { p: "Al trabajar bajo presión de tiempo:", c: "Me vuelvo más eficiente y directo.", s: "Me mantengo optimista y hablo más.", m: "Me vuelvo más callado y concentrado.", f: "Me bloqueo y cometo errores." },
-    { p: "Para ti, el uniforme Verssato es:", c: "Mi armadura para ganar el día.", s: "Una forma de verme bien.", m: "Un requisito que cumplo perfecto.", f: "Algo que me da igual usar." },
-    { p: "Al explicar una promoción compleja:", c: "Soy directo y resalto el ahorro.", s: "La cuento como una oportunidad increíble.", m: "Detallo términos y condiciones.", f: "Me enredo y prefiero que lean el cartel." },
-    { p: "Tu mayor motivación en Verssato es:", c: "Ser el número 1 y ganar comisiones.", s: "El ambiente de trabajo y conocer gente.", m: "Estabilidad y aprendizaje.", f: "Tener un empleo para mis gastos." },
-    { p: "Si un cliente es grosero contigo:", c: "Le pongo límites firmes de inmediato.", s: "Uso el humor para calmar la situación.", m: "Ignoro el tono y respondo técnicamente.", f: "Bajo la mirada y espero que se vaya." },
-    { p: "Ves que un compañero cometió un error en una factura:", c: "Se lo digo frente al jefe para que aprenda.", s: "Le ayudo a corregirlo discretamente.", m: "Lo anoto para el reporte de auditoría.", f: "No digo nada, cada quien con su puesto." },
-    { p: "Al organizar la bodega por colores:", c: "Lo hago a mi ritmo pero exigiendo rapidez al resto.", s: "Hago juegos para ver quién acaba antes.", m: "Sigo estrictamente el manual de degradados.", f: "Hago lo mínimo necesario para que se vea decente." },
-    { p: "Un cliente pregunta por un descuento que no existe:", c: "Le digo que no rotundamente.", s: "Le ofrezco un regalo pequeño para compensar.", m: "Le muestro la tabla de precios oficial.", f: "Le digo que voy a preguntar al jefe (aunque sepa que no)." },
-    { p: "Cuando hay una reunión de equipo:", c: "Doy mi opinión y propongo cambios drásticos.", s: "Cuento anécdotas para romper el hielo.", m: "Llevo cuaderno y anoto cada indicación.", f: "Me quedo al final y no hablo mucho." },
-    { p: "Si se rompe una percha en tu sección:", c: "La cambio al instante para no perder imagen.", s: "Pido a un compañero que me pase una nueva.", m: "Reviso si hay más perchas dañadas en el lote.", f: "La dejo ahí hasta que toque limpieza general." },
-    { p: "El sistema de facturación se cae con fila de espera:", c: "Organizo la fila y busco facturar manual ya.", s: "Mantengo a la gente entretenida hablando.", m: "Llamo a soporte técnico y sigo el protocolo.", f: "Me desespero y pido que alguien más atienda." },
-    { p: "Prefieres trabajar en:", c: "Días de mucha afluencia y presión.", s: "Eventos de lanzamiento y promociones sociales.", m: "Días de inventario y organización interna.", f: "Días tranquilos con tareas repetitivas." },
-    { p: "Al recibir mercadería premium muy cara:", c: "Pienso a qué clientes influyentes vendérsela.", s: "Me emociono y me la pruebo para lucirla.", m: "Verifico que el etiquetado sea perfecto.", f: "Me da miedo manipularla por si se daña." },
-    { p: "Si el local necesita limpieza profunda un lunes:", c: "Asigno zonas y superviso que quede impecable.", s: "Pono música y trato de que sea un momento ameno.", m: "Empiezo por las esquinas y lo más difícil.", f: "Espero que me asignen la zona más fácil." },
-    { p: "Un cliente se queda mucho tiempo en el probador:", c: "Le presiono preguntando si ya decidió.", s: "Le paso más prendas para que se divierta.", m: "Le pregunto si necesita una talla específica.", f: "Espero afuera en silencio a que salga." },
-    { p: "Para subir las ventas del mes propondrías:", c: "Un concurso interno de quién vende más.", s: "Una fiesta de clientes VIP en la tienda.", m: "Analizar los datos de compra del año pasado.", f: "No cambiar nada y esperar que mejore el clima." },
-    { p: "Si encuentras dinero tirado en el probador:", c: "Lo entrego al jefe exigiendo que se registre.", s: "Pregunto a los compañeros si es de alguien.", m: "Lo pongo en el fondo de caja como sobrante.", f: "Lo dejo ahí para que el dueño regrese por él." },
-    { p: "Al ver una vitrina mal vestida:", c: "La desarmo y la hago de nuevo yo mismo.", s: "Sugiero colores más llamativos al encargado.", m: "Mido las distancias entre maniquíes.", f: "Pienso que se ve mal pero no hago nada." },
-    { p: "Tu meta personal en la empresa es:", c: "Ser el gerente regional lo antes posible.", s: "Ser el empleado más querido por los clientes.", m: "Ser el experto técnico en todos los productos.", f: "Tener estabilidad y no tener problemas." },
-    { p: "Cuando un cliente pide tu opinión sincera:", c: "Le digo qué le queda bien para que compre ya.", s: "Le digo que se ve espectacular siempre.", m: "Le doy argumentos basados en el tipo de tela.", f: "Le digo que 'está bonito' para no comprometerme." },
-    { p: "Si hay un conflicto entre dos compañeros:", c: "Intervengo y decido quién tiene la razón.", s: "Trato de que se den un abrazo y olviden todo.", m: "Informo al supervisor con detalles de lo ocurrido.", f: "Me alejo y sigo con mi trabajo." },
-    { p: "Al preparar un envío a otra sucursal:", c: "Lo hago volando para sacarlo de encima.", s: "Escribo una nota amigable para la otra tienda.", m: "Hago doble conteo de cada unidad enviada.", f: "Pido que alguien más me ayude a embalar." },
-    { p: "Un cliente quiere devolver algo usado:", c: "Le digo que no y le muestro la política.", s: "Trato de convencerlo de cambiarlo por otra cosa.", m: "Examino la prenda minuciosamente buscando pruebas.", f: "Llamo al jefe porque no sé qué decir." },
-    { p: "En tu tiempo libre en la tienda:", c: "Busco qué vender o qué cliente abordar.", s: "Hablo con mis compañeros de temas personales.", m: "Ordeno las perchas por tamaño de menor a mayor.", f: "Me quedo parado en un lugar fijo esperando." },
-    { p: "Si el supervisor se va por 2 horas:", c: "Asumo el mando natural del equipo.", s: "Relajo el ambiente y hago bromas.", m: "Sigo trabajando exactamente igual que si estuviera.", f: "Aprovecho para sentarme un momento." },
-    { p: "Al sugerir una combinación de ropa:", c: "Soy arriesgado para vender más piezas.", s: "Sugiero lo que está de moda en redes sociales.", m: "Sugiero lo más clásico y funcional.", f: "Solo sugiero lo que el cliente me pide." },
-    { p: "Si un cliente te pide tu número personal:", c: "Se lo doy solo si es para futuras ventas.", s: "Se lo doy para ser amigos.", m: "Le doy el número oficial de la tienda.", f: "Me pongo nervioso y le digo que no tengo." },
-    { p: "Al etiquetar 500 prendas nuevas:", c: "Trato de romper el récord de velocidad.", s: "Platico mientras lo hago para que pase el tiempo.", m: "Reviso que cada etiqueta esté recta y centrada.", f: "Lo hago despacio para no cansarme." },
-    { p: "Si el aire acondicionado se daña y hace calor:", c: "Me quejo y exijo que lo arreglen ya.", s: "Hago bromas sobre el 'sauna' para que nadie sufra.", m: "Busco soluciones técnicas o ventiladores.", f: "Me muevo lento para no sudar." },
-    { p: "Un cliente entra hablando por teléfono a gritos:", c: "Le pido que baje la voz educadamente.", s: "Le sonrío y espero a que termine.", m: "Lo ignoro hasta que cuelgue el teléfono.", f: "Me alejo para que no me moleste el ruido." },
-    { p: "Al detectar que falta un accesorio pequeño:", c: "Interrogo a todos para saber qué pasó.", s: "Pienso que alguien lo pudo perder sin querer.", m: "Hago el cuadre de inventario inmediatamente.", f: "Espero a que el jefe lo note al final del día." },
-    { p: "Tu reacción ante un cambio de horario repentino:", c: "Acepto si eso me ayuda a vender más en horas pico.", s: "Acepto si mis amigos también cambian conmigo.", m: "Pido que me den el nuevo horario por escrito.", f: "Me molesto mucho porque altera mi rutina." },
-    { p: "Si un cliente te confunde con el dueño:", c: "Actúo como tal para cerrar la venta con autoridad.", s: "Me da risa y le cuento una broma.", m: "Le aclaro mi puesto de forma profesional.", f: "Me da mucha vergüenza y me escondo." },
-    { p: "Al explicar la garantía del calzado:", c: "Resalto que somos los mejores del mercado.", s: "Digo que no se preocupe, que todo saldrá bien.", m: "Leo los términos exactos del certificado.", f: "Digo que 'creo' que son 30 días." },
-    { p: "Cuando un cliente trae un perro a la tienda:", c: "Le indico las reglas de la tienda con firmeza.", s: "Me pongo a jugar con el perro.", m: "Observo que el perro no ensucie la mercadería.", f: "Me quedo lejos por si me muerde." },
-    { p: "Al ver que la competencia bajó precios:", c: "Propongo una estrategia agresiva para ganarles.", s: "Digo que nuestra atención es mejor que la de ellos.", m: "Hago una tabla comparativa de productos.", f: "Digo que ojalá nosotros bajemos precios también." },
-    { p: "Si te toca trabajar en otra sucursal un día:", c: "Llego a demostrar que soy el mejor vendedor.", s: "Trato de hacer amigos nuevos rápido.", m: "Estudio el inventario de esa tienda apenas llego.", f: "Me siente perdido y no hablo con nadie." },
-    { p: "Al organizar una fila para el probador:", c: "Doy órdenes claras y muevo a la gente rápido.", s: "Pido disculpas a todos por la espera con una sonrisa.", m: "Llevo el conteo exacto de quién sigue.", f: "Solo miro y espero que la gente se organice sola." },
-    { p: "Si un cliente te pide un descuento por ser 'influencer':", c: "Le digo que solo si nos garantiza 10 ventas hoy.", s: "Le pido una foto juntos para las redes.", m: "Le explico que los precios son fijos por sistema.", f: "Le pregunto al jefe por miedo a quedar mal." },
-    { p: "Al limpiar los vidrios de la fachada:", c: "Lo hago rápido y con fuerza.", s: "Saludo a la gente que pasa por afuera.", m: "Busco que no quede ni una sola mancha.", f: "Hago solo la parte que alcanzo sin esfuerzo." },
-    { p: "Tu actitud el día de pago es:", c: "Pienso en cuánto más voy a ganar el próximo mes.", s: "Invito algo a mis compañeros para celebrar.", m: "Reviso que cada centavo de mi comisión esté bien.", f: "Tomo mi dinero y me voy rápido." },
-    { p: "Si un cliente pregunta por el gerente y no está:", c: "Digo: 'Dígame a mí, yo resuelvo'.", s: "Digo que 'anda de compras' amablemente.", m: "Le pido sus datos para que el gerente lo llame.", f: "Digo que 'no sé dónde se metió'." },
-    { p: "Al ver que un compañero no sabe usar el sistema:", c: "Le quito el mouse y lo hago yo rápido.", s: "Le enseño con mucha paciencia y alegría.", m: "Le imprimo el manual de usuario.", f: "Espero a que aprenda solo tropezando." },
-    { p: "Si la tienda se queda sin luz:", c: "Cuido la puerta con actitud de seguridad.", s: "Cuento historias de terror para pasar el rato.", m: "Cierro caja y aseguro los documentos.", f: "Me quedo quieto esperando que vuelva." },
-    { p: "Al recibir un reclamo por una prenda rota:", c: "Investigo si el cliente la rompió a propósito.", s: "Le doy un abrazo (metafórico) y trato de calmarlo.", m: "Sigo el proceso de devolución paso a paso.", f: "Me asusto y llamo a alguien más." },
-    { p: "Tu mayor habilidad en ventas es:", c: "Cerrar ventas imposibles.", s: "Hacer que el cliente se sienta mi amigo.", m: "Conocer cada detalle técnico del producto.", f: "Tener paciencia infinita con el cliente." },
-    { p: "Si el jefe te felicita en público:", c: "Digo que es lo que se esperaba de mí.", s: "Agradezco a todo el equipo con emoción.", m: "Pienso en qué métrica puedo mejorar aún más.", f: "Me pongo rojo y no digo nada." },
-    { p: "Al ver que una caja de zapatos está aplastada:", c: "La saco de exhibición inmediatamente.", s: "Trato de arreglarla con las manos para que no se nota.", m: "Busco una caja nueva en bodega para cambiarla.", f: "La dejo atrás para que no la vean." },
-    { p: "Si un cliente te pide que le guardes algo sin abonar:", c: "Le digo que solo por 1 hora máximo.", s: "Le digo que sí porque me cayó muy bien.", m: "Le explico la política de apartados con abono.", f: "Le digo que sí y luego lo olvido." },
-    { p: "Al trabajar un día feriado:", c: "Vengo con la mentalidad de vender el doble.", s: "Vengo feliz de compartir el día con el equipo.", m: "Reviso si el pago extra es correcto por ley.", f: "Vengo de mal humor porque quería descansar." },
-    { p: "Si el local huele mal por un problema de tubería:", c: "Busco el origen y trato de sellarlo yo mismo.", s: "Compro incienso o perfume para disimular.", m: "Llamo a mantenimiento y reporto el incidente.", f: "Me tapo la nariz y me quejo todo el día." },
-    { p: "Tu forma de abordar a un cliente nuevo es:", c: "Directo: '¿Qué talla busca para probárselo?'.", s: "Cercano: '¡Qué lindo su bolso! ¿Busca algo hoy?'.", m: "Profesional: 'Buenas tardes, bienvenido a Verssato'.", f: "Pasivo: Espero a que el cliente me mire." },
-    { p: "Al ver que un maniquí se cayó:", c: "Lo levanto y lo visto mejor que antes.", s: "Le digo al compañero que me ayude a levantarlo.", m: "Analizo por qué se cayó para que no pase de nuevo.", f: "Paso por el lado y espero que otro lo levante." },
-    { p: "Si un cliente te ofrece una propina:", c: "La rechazo con orgullo profesional.", s: "La acepto para el café de todos.", m: "Consulto si las políticas lo permiten.", f: "La tomo rápido y me la guardo." },
-    { p: "Al cambiar los precios de toda la tienda:", c: "Empiezo por los más caros para ver el margen.", s: "Hago competencias de quién etiqueta más rápido.", m: "Verifico tres veces que el precio coincida con el código.", f: "Hago lo que puedo y dejo el resto para mañana." },
-    { p: "Si un cliente te pide un modelo de hace 3 años:", c: "Le digo que eso ya pasó de moda, que vea lo nuevo.", s: "Le digo que voy a buscar algo 'parecido' increíble.", m: "Le explico la rotación de colecciones de la marca.", f: "Digo simplemente: 'No hay'." },
-    { p: "Al manejar dinero en efectivo:", c: "Cuento rápido y con seguridad.", s: "Platico con el cliente mientras cuento.", m: "Cuento dos veces y acomodo los billetes por cara.", f: "Me pongo nervioso por si me falta dinero." },
-    { p: "Tu reacción si un compañero llega tarde siempre:", c: "Le reclamo frente a todos.", s: "Le pregunto si tiene problemas en casa.", m: "Registro sus horas de llegada para el jefe.", f: "No es mi problema mientras yo llegue a tiempo." },
-    { p: "Al explicar por qué Verssato es caro:", c: "Digo que el estatus tiene un precio.", s: "Digo que la exclusividad vale la pena.", m: "Digo que es por la calidad de los materiales.", f: "Digo que 'así vienen los precios de fábrica'." },
-    { p: "Si un cliente entra con comida a la tienda:", c: "Le pido que la guarde o salga de inmediato.", s: "Le digo amablemente que cuidado ensucia.", m: "Le indico el cartel de prohibido comida.", f: "No le digo nada para no ser grosero." },
-    { p: "Al ordenar las medias por tallas:", c: "Lo hago en 5 minutos sin fallar.", s: "Hago figuras con los paquetes para que se vea divertido.", m: "Uso una regla para que queden alineadas.", f: "Solo las amontono por color." },
-    { p: "Si te toca cerrar la tienda solo:", c: "Hago todo el proceso en tiempo récord.", s: "Me pongo a cantar mientras cierro.", m: "Sigo la lista de verificación punto por punto.", f: "Me da miedo quedarme solo y cierro apurado." },
-    { p: "Un cliente quiere comprar algo pero no le queda bien:", c: "Le vendo otra cosa que sí le quede.", s: "Le digo que se ve bien de todas formas.", m: "Le explico por qué ese corte no es para él.", f: "Le dejo que lo compre si quiere." },
-    { p: "Si el piso está mojado porque llovió:", c: "Pongo el cartel de seguridad y seco yo mismo.", s: "Digo a todos que tengan cuidado gritando.", m: "Hago un cerco con cinta o cajas.", f: "Espero a que el piso se seque solo." },
-    { p: "Tu mayor miedo en el trabajo es:", c: "No llegar a la meta de ventas.", s: "Caerle mal al equipo o a los clientes.", m: "Cometer un error en el inventario.", f: "Que me regañen por algo que no hice." },
-    { p: "Al ver a un niño corriendo en la tienda:", c: "Le pido a los padres que lo controlen con firmeza.", s: "Trato de jugar con el niño para que se calme.", m: "Me aseguro de que no haya espejos que pueda botar.", f: "Solo miro con cara de molestia." },
-    { p: "Si el sistema dice que hay 1 prenda y no la encuentras:", c: "Muevo toda la bodega hasta que aparezca.", s: "Le digo al cliente que 'se acaba de vender'.", m: "Anoto el error en la bitácora de diferencias.", f: "Digo: 'No hay, el sistema está loco'." },
-    { p: "Al recibir a un cliente que ya conoces:", c: "Le ofrezco lo más nuevo para su estilo.", s: "Le doy un abrazo y le pregunto por su familia.", m: "Busco su historial de compras en el sistema.", f: "Le saludo normal, como a cualquiera." },
-    { p: "Si un compañero te pide prestado dinero:", c: "Le digo que no mezclo dinero con amistad.", s: "Le presto si tengo, sin pensarlo.", m: "Le pregunto para qué lo necesita exactamente.", f: "Digo que no tengo, aunque sí tenga." },
-    { p: "Al armar una caja de regalo:", c: "La hago perfecta y lujosa en segundos.", s: "Le pongo un moño gigante y mucho papel.", m: "Sigo las instrucciones del manual de empaque.", f: "Pido que el cliente la arme en casa." },
-    { p: "Si un cliente te pide opinión sobre la competencia:", c: "Digo que ellos no tienen nuestra clase.", s: "Digo que son buenos, pero nosotros somos mejores.", m: "Analizo objetivamente las diferencias de producto.", f: "Digo que no los conozco." },
-    { p: "Al limpiar tu área de trabajo:", c: "Uso los mejores productos para que brille.", s: "Lo hago mientras platico con alguien.", m: "Sigo un orden de arriba hacia abajo.", f: "Solo sacudo el polvo por encima." },
-    { p: "Si te equivocas en el cambio y el cliente se da cuenta:", c: "Me disculpo con autoridad y corrijo rápido.", s: "Me río del error para quitarle importancia.", m: "Vuelvo a contar frente al cliente muy despacio.", f: "Me asusto y empiezo a sudar." },
-    { p: "Al ver que el jefe está estresado:", c: "Le digo que yo me encargo de todo el piso.", s: "Le cuento un chiste o le traigo un café.", m: "Le entrego los reportes del día sin hablar.", f: "Me escondo para que no se desquite conmigo." },
-    { p: "Tu reacción ante un cliente indeciso:", c: "Le elijo yo la prenda y cierro la venta.", s: "Le tengo toda la paciencia del mundo.", m: "Le doy una lista de pros y contras.", f: "Espero que decida solo, no me meto." },
-    { p: "Al ver que alguien dejó basura en la tienda:", c: "La recojo molesto buscando quién fue.", s: "La recojo y la tiro sin decir nada.", m: "Llamo a limpieza inmediatamente.", f: "La pateo debajo de un mueble." },
-    { p: "Si el baño no tiene papel:", c: "Voy a bodega y pongo un rollo nuevo ya.", s: "Le aviso a todos de forma graciosa.", m: "Reporto la falta de insumos al supervisor.", f: "Espero a que alguien más se dé cuenta." },
-    { p: "Al organizar un evento de ventas nocturno:", c: "Me aseguro de ser el que más facture esa noche.", s: "Soy el alma de la fiesta atendiendo a todos.", m: "Llevo el control estricto de las invitaciones.", f: "Vengo solo porque es obligatorio." },
-    { p: "Si un cliente quiere probarse 20 pares de zapatos:", c: "Le traigo los 5 mejores y trato de cerrar ya.", s: "Se los traigo todos y platicamos de cada uno.", m: "Los voy ordenando por modelo según se los quita.", f: "Me canso y pido ayuda a otro compañero." },
-    { p: "Al detectar una prenda manchada de maquillaje:", c: "La saco y trato de limpiarla con técnica.", s: "Le digo a mis compañeras: 'Miren lo que hicieron'.", m: "Hago un acta de merma por descuido de cliente.", f: "La pongo al final del perchero para que no se vea." },
-    { p: "Tu opinión sobre las metas mensuales es:", c: "Son un piso, yo siempre voy por el doble.", s: "Son divertidas si el equipo está unido.", m: "Son necesarias para medir mi eficiencia técnica.", f: "Son estresantes y preferiría no tenerlas." },
-    { p: "Si un cliente te pide que le mientas a su pareja:", c: "Le sigo el juego para cerrar la venta.", s: "Me río y me vuelvo su cómplice.", m: "Me pongo serio y me enfoco en el ticket.", f: "Me da vergüenza y me retiro." },
-    { p: "Al ver que el piso de ventas está solo:", c: "Salgo a la calle a jalar gente.", s: "Me pongo a ver las tendencias en el celular.", m: "Hago un conteo ciego de la mercadería.", f: "Me quedo relajado esperando que entre alguien." },
-    { p: "Si Verssato fuera una persona, dirías que es:", c: "Un líder imparable y elegante.", s: "El amigo más cool y sociable.", m: "Alguien perfecto y muy detallista.", f: "Alguien tranquilo que no molesta a nadie." }
+    { p: "Si el local está lleno y hay pocos vendedores:", a: "Tomo el mando, asigno clientes y acelero el cierre de todos.", b: "Saludo a todos con alegría para que se sientan atendidos.", c: "Me enfoco en facturar con precisión para evitar errores.", d: "Mantengo mi ritmo habitual, y ayudo en lo que necesiten." },
+    { p: "Un cliente dice que la ropa de la competencia es mejor:", a: "Le rebato con autoridad demostrando por qué somos superiores.", b: "Le gano con carisma y trato de que confíe en mi palabra.", c: "Le doy una lista de especificaciones técnicas y de calidad.", d: "Escucho con calma y sigo mostrando mas promociones." },
+    { p: "Faltan 10 minutos para cerrar y llega un cliente:", a: "Lo abordo rápido enfocado en que compre en ese instante.", b: "Lo recibo con la mejor energía, el horario no me importa.", c: "Le informo las políticas de cierre y trato de ser breve.", d: "Pregunto si es un pedido rapido o si nos tomaria mucho tiempo." },
+    { p: "Al encontrar una falla en el inventario:", a: "Busco al responsable de inmediato y exijo una solución.", b: "Trato de resolverlo sin que se sienta tensión en el equipo.", c: "Hago un reporte detallado paso a paso de la diferencia.", d: "Espero a que llegue mi supervisos para resolverlo juntos." },
+    { p: "Cuando un cliente no se decide por una prenda:", a: "Le doy un argumento contundente para cerrar la venta ya.", b: "Le digo lo bien que se le ve y lo animo emocionalmente.", c: "Le explico detalladamente la relación costo-beneficio.", d: "Espero pacientemente pero estoy listo para cerrar la venta." },
+    { p: "Tu jefe te pide cambiar la vitrina ahora mismo:", a: "Lo hago de inmediato, aportando mi idea para que venda más.", b: "Pido ayuda a mis compañeros para que sea un momento ameno.", c: "Mido los espacios y sigo estrictamente el manual de marca.", d: "Lo hago con calma, sin desesperarme y lo cumplo." },
+    { p: "Un compañero está distraído con el celular:", a: "Le llamo la atención directamente para que se enfoque.", b: "Le hago una broma para que guarde el teléfono y trabaje.", c: "Lo registro mentalmente para informarlo en mi reporte.", d: "Doy ejemplo para que vea como funciona Verssato." },
+    { p: "Llegó mercadería nueva en cajas pesadas:", a: "Empiezo a cargar y ordeno al resto dónde poner cada cosa.", b: "Animo al grupo para terminar rápido con buena actitud.", c: "Verifico el packing list minuciosamente antes de mover nada.", d: "Sigo las ordenes que me den al pie de la letra." },
+    { p: "Un cliente pide un cambio sin tener el ticket:", a: "Le niego el cambio firmemente respetando la jerarquía.", b: "Busco una solución creativa para que se vaya feliz.", c: "Consulto el sistema para rastrear la venta con precisión.", d: "Busco al vendedor de ese producto para que procese el cambio." },
+    { p: "La meta de venta diaria está muy lejos de cumplirse:", a: "Salgo a la puerta a captar clientes con agresividad.", b: "Hago dinámicas o hablo más para subir el ánimo del grupo.", c: "Analizo técnicamente qué artículos no se han movido.", d: "Soy paciente con el proceso y busco estrategias de venta." },
+    { p: "Te ofrecen una capacitación un domingo:", a: "Asisto para ser el mejor y subir mis números.", b: "Voy para compartir y fortalecer al equipo.", c: "Asisto para aprender cada detalle técnico nuevo.", d: "Me conecto de manera virtual con el permiso de mis superiores." },
+    { p: "Un cliente se queja del desorden en tienda:", a: "Empiezo a ordenar de inmediato con enfoque comercial.", b: "Pido disculpas y arreglo rápido lo que el cliente ve.", c: "Analizo por qué el proceso de orden falló hoy.", d: "Ordeno tranquilamente y sigo con mis labores normales." },
+    { p: "Recibes una crítica fuerte de tu superior:", a: "Acepto el reto y prometo superar sus expectativas.", b: "Trato de explicarle mi punto para que no se enoje.", c: "Tomo notas detalladas para corregir el error exacto.", d: "Me reto a mi mismo y prometo mejorar para la proxima." },
+    { p: "Se te asigna limpiar los baños de la tienda:", a: "Lo hago volando para volver rápido a las ventas.", b: "Lo hago bromeando para que no sea una carga.", c: "Lo dejo impecable usando los químicos exactos.", d: "Busco a mi mejor compañero para hacer la tarea de mejor forma juntos." },
+    { p: "Ves que alguien intenta robar una prenda:", a: "Lo intercepto con autoridad de forma inmediata.", b: "Hago una señal sutil para alertar al resto.", c: "Aviso a seguridad siguiendo el protocolo técnico.", d: "Reacciono rapido en base a mis instintos y resuelvo." },
+    { p: "El cliente quiere algo que no hay en stock:", a: "Le vendo lo más parecido, no dejo que se vaya vacío.", b: "Le pido su contacto para avisarle apenas llegue.", c: "Le explico detalladamente cuándo llegará el pedido.", d: "Muestro otros modelos rapido para venderlo." },
+    { p: "Al trabajar bajo mucha presión de tiempo:", a: "Me vuelvo mucho más eficiente, directo y rápido.", b: "Me mantengo optimista y hablo más con todos.", c: "Me vuelvo más callado, serio y concentrado.", d: "Hago mi trabajo y cumplo ordenes en mi zona de confort." },
+    { p: "Para ti, el uniforme de Verssato es:", a: "Mi armadura para ganar y cerrar ventas.", b: "Una forma de lucir bien ante los clientes.", b: "Un requisito de marca que cumplo a la perfección.", d: "Es mi herramienta de trabajo que la empresa me lo obsequio." },
+    { p: "Al explicar una promoción compleja:", a: "Soy directo y resalto cuánto dinero ahorrará.", b: "La cuento como una oportunidad emocional increíble.", c: "Detallo cada término y condición legal del cartel.", d: "Resuelvo dudas o preguntas que el cliente tenga." },
+    { p: "Tu mayor motivación en Verssato es:", a: "Ser el número 1 en el ranking y ganar más.", b: "El ambiente social y conocer gente nueva.", c: "La estabilidad laboral y el aprendizaje técnico.", d: "Destacar con mi trabajo y tener un estilo de vida tranquilo." },
+    { p: "Si un cliente es grosero contigo:", a: "Le pongo límites firmes con autoridad de inmediato.", b: "Uso el humor o carisma para calmar la situación.", c: "Ignoro su tono y respondo con datos técnicos.", d: "Nunca cambio mi buena actitud y sigo mi dia." },
+    { p: "Un compañero cometió un error en una factura:", a: "Se lo digo directamente para que no afecte la meta.", b: "Le ayudo a corregirlo discretamente sin líos.", c: "Lo anoto para el reporte de auditoría interna.", d: "Observo, y aprendo para no cometer el mismo error" },
+    { p: "Al organizar la bodega en un inventario:", a: "Lo hago rápido y exijo la misma velocidad al resto.", b: "Hago juegos o competencias para que sea divertido.", c: "Sigo estrictamente el manual de degradados oficial.", d: "Cumplo mi trabajo siguiendo los lineamientos de Verssato." },
+    { p: "Un cliente pide un descuento inexistente:", a: "Le digo que no de forma rotunda y profesional.", b: "Le ofrezco un obsequio pequeño para compensar.", c: "Le muestro la lista de precios oficial del sistema.", d: "Pido aprobacion a mi jefe o supervisor." },
+    { p: "Cuando hay una reunión de equipo:", a: "Doy mi opinión clara y propongo cambios directos.", b: "Cuento anécdotas para romper el hielo del grupo.", c: "Llevo cuaderno y anoto cada instrucción recibida.", d: "Aprendo, y presto atencion a la capacitacion sin distraerme." },
+    { p: "Si se rompe una percha en tu sección:", a: "La cambio al instante para no dañar la imagen.", b: "Pido a un compañero que me traiga una nueva.", c: "Reviso si hay más perchas dañadas en todo el lote.", d: "Sigo con mis funciones para garantizar ventas y lo arreglo con el tiempo." },
+    { p: "El sistema se cae con fila de espera:", a: "Organizo la fila y busco cobrar de forma manual ya.", b: "Mantengo a la gente entretenida y feliz hablando.", c: "Llamo a soporte y sigo el manual de contingencia.", d: "Solicito ayuda a mis compañeros para un plan de respaldo." },
+    { p: "Prefieres trabajar en:", a: "Días de mucha afluencia, retos y presión alta.", b: "Eventos de lanzamiento y promociones sociales.", c: "Días de inventario, etiquetas y orden interno.", d: "Días con tareas en las que destaco y soy el mejor." },
+    { p: "Al recibir mercadería premium muy cara:", a: "Pienso de inmediato a qué clientes VIP llamaré.", b: "Me emociono y quiero lucirla ante los clientes.", c: "Verifico que el etiquetado y sensores sean perfectos.", d: "Solicito ayuda para registrar todo en equipo." },
+    { p: "El local necesita limpieza profunda un lunes:", a: "Asigno zonas y superviso que quede impecable ya.", b: "Pongo música y trato de que el equipo se anime.", c: "Empiezo por las esquinas y los detalles difíciles.", d: "Espero a mis superiores para buscar la mejor manera de limpiar." },
+    { p: "Un cliente se queda mucho tiempo en el probador:", a: "Le presiono preguntando qué decidió llevar.", b: "Le paso más prendas para que siga disfrutando.", c: "Le pregunto si necesita una talla o medida técnica.", d: "Espero pacientemente mientras atiendo a otros clientes." },
+    { p: "Para subir las ventas del mes:", a: "Lanzaría un concurso de quién factura más dinero.", b: "Organizaría un evento social con clientes en tienda.", c: "Analizaría los datos de compra del semestre pasado.", d: "No cambiaría nada y esperaría que el flujo mejore." },
+    { p: "Si encuentras dinero tirado en el probador:", a: "Lo entrego al jefe exigiendo que se reporte formalmente.", b: "Pregunto a todos los compañeros de quién puede ser.", c: "Lo registro en el fondo de caja como sobrante oficial.", d: "Lo dejo ahí mismo por si el dueño regresa luego." },
+    { p: "Al ver una vitrina mal vestida:", a: "La desarmo y la armo de nuevo yo mismo ahora.", b: "Sugiero colores más vivos al encargado de turno.", c: "Mido con precisión las distancias de los maniquíes.", d: "Pienso que se ve mal pero prefiero no intervenir." },
+    { p: "Tu meta personal en Verssato es:", a: "Escalar a la gerencia en el menor tiempo posible.", b: "Ser el vendedor más querido por todos los clientes.", c: "Ser el experto máximo en el conocimiento del producto.", d: "Tener estabilidad laboral sin meterme en problemas." },
+    { p: "Un cliente pide tu opinión sincera:", a: "Le digo qué le queda mejor para cerrar la venta.", b: "Le digo que se ve espectacular en todo momento.", c: "Le doy argumentos técnicos sobre el tipo de tela.", d: "Le digo que 'está bonito' para no comprometerme." },
+    { p: "Conflicto entre dos compañeros de trabajo:", a: "Intervengo con autoridad y decido la solución.", b: "Trato de que se amiguen y olviden el problema.", c: "Informo al jefe con un reporte de lo sucedido.", d: "Me alejo y sigo en lo mío para no involucrarme." },
+    { p: "Al preparar un envío a otra sucursal:", a: "Lo hago lo más rápido posible para facturar más.", b: "Escribo una nota amigable para los compañeros.", c: "Hago un doble conteo riguroso de cada unidad.", d: "Pido que otro me ayude porque me aburre embalar." },
+    { p: "Un cliente quiere devolver algo usado:", a: "Le digo que no rotundamente y muestro la regla.", b: "Trato de convencerlo de cambiarlo por otra cosa.", c: "Examino la prenda con lupa buscando pruebas de uso.", d: "Llamo al jefe porque me pone nervioso el reclamo." },
+    { p: "En tu tiempo libre en la tienda:", a: "Busco qué vender o a qué cliente abordar afuera.", b: "Hablo con mis compañeros de temas personales.", c: "Ordeno las perchas por tamaño de menor a mayor.", d: "Me quedo parado en un lugar fijo esperando órdenes." },
+    { p: "Si el supervisor se va por 2 horas:", a: "Asumo el mando del equipo de forma natural.", b: "Relajo el ambiente y hago bromas con todos.", c: "Sigo trabajando igual que si él estuviera allí.", d: "Aprovecho para sentarme o descansar un poco." },
+    { p: "Al sugerir una combinación de ropa:", a: "Soy arriesgado para vender el máximo de piezas.", b: "Sugiero lo que está de moda en las redes sociales.", c: "Sugiero lo más clásico, funcional y combinable.", d: "Solo sugiero lo que el cliente me pide ver." },
+    { p: "Si un cliente te pide tu número personal:", a: "Se lo doy solo si es para asegurar ventas futuras.", b: "Se lo doy para que seamos amigos fuera de aquí.", c: "Le entrego la tarjeta oficial con el número de tienda.", d: "Me pongo nervioso y le digo que no tengo celular." },
+    { p: "Al etiquetar 500 prendas nuevas:", a: "Intento romper el récord de velocidad de la tienda.", b: "Platico mientras lo hago para que el tiempo vuele.", c: "Reviso que cada etiqueta esté recta y centrada.", d: "Lo hago despacio para no cansarme antes de tiempo." },
+    { p: "El aire acondicionado se daña y hace calor:", a: "Exijo que lo arreglen ya para no perder ventas.", b: "Hago bromas sobre el calor para subir el ánimo.", c: "Busco soluciones técnicas o ventiladores de apoyo.", d: "Me muevo lo menos posible para no sudar tanto." },
+    { p: "Un cliente entra gritando por teléfono:", a: "Le pido que baje la voz educadamente por respeto.", b: "Le sonrío amablemente y espero a que termine solo.", c: "Lo ignoro por completo hasta que decida colgar.", d: "Me alejo de la zona para que no me moleste el ruido." },
+    { p: "Falta un accesorio pequeño en el conteo:", a: "Interrogo a todos para saber quién fue el último.", b: "Pienso que alguien lo pudo perder sin querer hoy.", c: "Hago el cuadre de inventario de toda la sección.", d: "Espero a que el jefe se dé cuenta al final del día." },
+    { p: "Cambio de horario repentino por necesidad:", a: "Acepto si eso me pone en las horas de más venta.", b: "Acepto si mis amigos del equipo también cambian.", c: "Pido que el nuevo horario me lo den por escrito.", d: "Me molesto mucho porque me arruina mi rutina." },
+    { p: "Un cliente te confunde con el dueño:", a: "Actúo con autoridad para cerrar la venta ya.", b: "Me da risa y le cuento una anécdota graciosa.", c: "Le aclaro mi puesto exacto de forma profesional.", d: "Me da mucha vergüenza y trato de retirarme." },
+    { p: "Al explicar la garantía de los zapatos:", a: "Resalto que somos los líderes en calidad total.", b: "Digo que no se preocupe, que todo saldrá genial.", c: "Leo los términos exactos del certificado de marca.", d: "Digo que 'creo' que el tiempo son unos 30 días." },
+    { p: "Un cliente trae un perro a la tienda:", a: "Le indico las reglas de la tienda con mucha firmeza.", b: "Me acerco a jugar con el perro para ser amable.", c: "Observo que el animal no ensucie nada del stock.", d: "Me quedo lejos por si el perro llega a morderme." },
+    { p: "La competencia bajó precios agresivamente:", a: "Propongo una estrategia más agresiva para ganarles.", b: "Digo que nuestra atención es mil veces superior.", c: "Hago una tabla técnica comparativa de productos.", d: "Digo que ojalá nosotros también bajemos los precios." },
+    { p: "Te toca trabajar en otra sucursal un día:", a: "Llego a demostrar que soy el mejor cerrador allí.", b: "Trato de hacer amigos nuevos en ese equipo rápido.", c: "Estudio el inventario de esa tienda apenas entro.", d: "Me siento perdido y casi no hablo con los demás." },
+    { p: "Organizar la fila de los probadores:", a: "Doy órdenes claras y muevo a la gente con rapidez.", b: "Pido disculpas con una sonrisa por la espera.", c: "Llevo el conteo exacto de los turnos en orden.", d: "Miro y espero que la gente se organice sola." },
+    { p: "Un cliente pide descuento por ser 'influencer':", a: "Solo si nos garantiza traer 10 ventas hoy mismo.", b: "Le pido una foto juntos para las redes de ambos.", c: "Le explico que los precios los fija el sistema.", d: "Le pregunto al jefe por miedo a quedar mal con él." },
+    { p: "Al limpiar los vidrios de la fachada:", a: "Lo hago con fuerza y rapidez para terminar ya.", b: "Saludo a la gente que pasa caminando por afuera.", c: "Busco que no quede ni una sola huella o mancha.", d: "Hago solo lo que alcanzo sin tener que estirarme." },
+    { p: "Tu actitud el día de pago es:", a: "Pienso en cuánto más facturaré el próximo mes.", b: "Invito algo a mis compañeros para celebrar juntos.", c: "Reviso que cada centavo de comisión sea exacto.", d: "Tomo mi pago y me voy rápido a mi casa." },
+    { p: "Un cliente pregunta por el gerente ausente:", a: "Digo con seguridad: 'Dígame a mí, yo resuelvo'.", b: "Digo que 'anda haciendo gestiones' amablemente.", c: "Le pido sus datos para que lo llamen después.", d: "Digo simplemente que 'no sé dónde se metió'." },
+    { p: "Un compañero no sabe usar el sistema nuevo:", a: "Le quito el mouse y lo hago yo para no tardar.", b: "Le enseño con mucha paciencia, risas y alegría.", c: "Le imprimo el manual de usuario para que lea.", d: "Espero a que aprenda solo a base de errores." },
+    { p: "La tienda se queda sin luz de repente:", a: "Cuido la puerta con actitud firme de seguridad.", b: "Cuento historias o bromas para pasar el rato.", c: "Cierro la caja y aseguro todos los documentos.", d: "Me quedo quieto esperando que la luz regrese." },
+    { p: "Reclamo por una prenda que llegó rota:", a: "Investigo si el cliente la dañó a propósito.", b: "Lo calmo con palabras dulces y trato de ayudar.", c: "Sigo el proceso de devolución técnico paso a paso.", d: "Me asusto y llamo a otro para que hable con él." },
+    { p: "Tu mayor habilidad en el piso de ventas:", a: "Cerrar ventas que otros daban por perdidas.", b: "Hacer que el cliente se sienta mi mejor amigo.", c: "Conocer cada detalle técnico de lo que vendemos.", d: "Tener una paciencia infinita con los indecisos." },
+    { p: "El jefe te felicita frente a todos:", a: "Digo que es el resultado que siempre se espera.", b: "Agradezco a todo el equipo con mucha emoción.", c: "Pienso en qué métrica puedo superar mañana.", d: "Me pongo muy rojo y prefiero no decir nada." },
+    { p: "Ves una caja de zapatos aplastada en estante:", a: "La saco de la exhibición de forma inmediata.", b: "Trato de arreglarla con las manos rápidamente.", c: "Busco una caja nueva idéntica en la bodega.", d: "La pongo al fondo para que nadie la vea hoy." },
+    { p: "Un cliente pide apartar algo sin abonar dinero:", a: "Le digo que solo por 1 hora máximo por política.", b: "Le digo que sí porque me cayó muy bien hoy.", c: "Le explico la política técnica de apartados.", d: "Le digo que sí y luego me olvido por completo." },
+    { p: "Al trabajar un día feriado nacional:", a: "Vengo enfocado en vender el doble de lo normal.", b: "Vengo feliz de compartir el día con el equipo.", c: "Reviso que el pago extra sea el correcto por ley.", d: "Vengo de mal humor porque quería dormir más." },
+    { p: "Huele mal en la tienda por una tubería:", a: "Busco el origen y trato de sellarlo yo mismo ya.", b: "Compro un ambientador fuerte para disimular.", c: "Llamo a mantenimiento y reporto el incidente.", d: "Me tapo la nariz y me quejo todo mi turno." },
+    { p: "Tu forma de abordar a un cliente nuevo:", a: "Directo: '¿Qué talla le traigo para que pruebe?'.", b: "Cercano: '¡Qué lindo su reloj! ¿Qué busca hoy?'.", b: "Profesional: 'Buenas tardes, bienvenido a la tienda'.", d: "Pasivo: Espero a que el cliente me mire primero." },
+    { p: "Ves que un maniquí se cayó al piso:", a: "Lo levanto y lo visto mejor que como estaba.", b: "Le digo a un compañero que me ayude a pararlo.", c: "Analizo por qué se cayó para que no repita.", d: "Paso por el lado y espero que otro lo levante." },
+    { p: "Un cliente te ofrece una propina extra:", a: "La rechazo con firme orgullo profesional.", b: "La acepto feliz para el café de todo el grupo.", c: "Consulto si las políticas de empresa lo permiten.", d: "La tomo rápidamente y me la guardo en el bolsillo." },
+    { p: "Cambiar los precios de toda la tienda:", a: "Empiezo por los más caros para ver el margen.", b: "Hago competencias de quién etiqueta más veloz.", c: "Verifico tres veces que el código sea el correcto.", d: "Hago lo que puedo y dejo el resto para mañana." },
+    { p: "Cliente pide un modelo de hace años:", a: "Digo que eso ya pasó, que vea lo nuevo y mejor.", b: "Digo que buscaré algo parecido que le encantará.", c: "Le explico la rotación técnica de las colecciones.", d: "Digo simplemente: 'De eso ya no nos queda'." },
+    { p: "Al manejar dinero en efectivo en caja:", a: "Cuento con gran rapidez y mucha seguridad.", b: "Platico con el cliente mientras cuento el dinero.", c: "Cuento dos veces y ordeno billetes por cara.", d: "Me pongo nervioso por si me llega a faltar algo." },
+    { p: "Un compañero llega tarde todos los días:", a: "Le reclamo seriamente frente a todo el grupo.", b: "Le pregunto si tiene algún problema en su casa.", c: "Registro sus horas exactas para informar al jefe.", d: "No es mi problema mientras yo cumpla mi hora." },
+    { p: "Al explicar por qué Verssato es costoso:", a: "Digo que el estatus y el poder tienen un precio.", b: "Digo que la exclusividad total vale la pena.", c: "Digo que es por la alta calidad de los materiales.", d: "Digo que 'así es como vienen los precios'." },
+    { p: "Un cliente entra con comida al local:", a: "Le pido que la guarde o salga de inmediato.", b: "Le digo amablemente que tenga cuidado al ver.", c: "Le indico el cartel técnico de prohibición.", d: "No le digo nada para evitar un mal momento." },
+    { p: "Ordenar las medias por tallas y colores:", a: "Lo hago en 5 minutos sin fallar en ninguna.", b: "Hago figuras con los paquetes para que sea alegre.", c: "Uso una regla para que queden alineadas.", d: "Solo las amontono por color y ya está." },
+    { p: "Si te toca cerrar la tienda tú solo hoy:", a: "Hago todo el proceso en un tiempo récord.", b: "Me pongo a cantar o silbar mientras cierro.", c: "Sigo la lista de verificación punto por punto.", d: "Me da miedo la soledad y cierro muy apurado." },
+    { p: "Cliente compra algo que no le queda bien:", a: "Le vendo otra cosa que sí le resalte mejor.", b: "Le digo que se ve bien de todas formas hoy.", c: "Le explico por qué ese corte no es para él.", d: "Dejo que lo compre si así lo desea el cliente." },
+    { p: "El piso está mojado porque llovió mucho:", a: "Pongo el cartel y seco la zona yo mismo ya.", b: "Aviso a todos a gritos que tengan cuidado.", c: "Hago un cerco con cinta o cajas de seguridad.", d: "Espero a que el piso se seque por el aire solo." },
+    { p: "Tu mayor miedo en el trabajo diario:", a: "No llegar a la meta de ventas del mes.", b: "Caerle mal al equipo o a los clientes nuevos.", c: "Cometer un error grave en el inventario final.", d: "Que me regañen por algo que yo no hice." },
+    { p: "Un niño corre y grita por toda la tienda:", a: "Pido a los padres que lo controlen con firmeza.", b: "Trato de jugar con el niño para que se calme.", c: "Me aseguro de que no bote espejos o estantes.", d: "Solo miro al niño con cara de mucha molestia." },
+    { p: "Sistema dice que hay 1 prenda y no aparece:", a: "Muevo toda la bodega hasta que la encuentro.", b: "Digo al cliente que 'se acaba de vender ahora'.", c: "Anoto el error en la bitácora de diferencias.", d: "Digo: 'No hay, ese sistema siempre falla'." },
+    { p: "Recibir a un cliente que ya conoces de antes:", a: "Le ofrezco lo más nuevo para su estilo único.", b: "Le doy un abrazo y pregunto por su familia.", c: "Busco su historial de compras en el sistema.", d: "Le saludo de forma normal, como a cualquiera." },
+    { p: "Un compañero te pide dinero prestado:", a: "Digo que no mezclo dinero con las amistades.", b: "Le presto si tengo en ese momento, sin duda.", c: "Le pregunto para qué lo necesita exactamente.", d: "Digo que no tengo nada, aunque sí tenga algo." },
+    { p: "Al armar una caja de regalo premium:", a: "La hago perfecta, lujosa y en pocos segundos.", b: "Le pongo un moño gigante y mucho papel seda.", c: "Sigo las instrucciones del manual de empaque.", d: "Pido que el cliente intente armarla en su casa." },
+    { p: "Cliente pide opinión sobre la competencia:", a: "Digo que ellos no tienen nuestro nivel y clase.", b: "Digo que son buenos, pero nosotros somos mejores.", c: "Analizo objetivamente las diferencias del producto.", d: "Digo simplemente que no los conozco de nada." },
+    { p: "Al limpiar tu área personal de trabajo:", a: "Uso los mejores productos para que brille todo.", b: "Lo hago mientras platico alegremente con alguien.", c: "Sigo un orden estricto de arriba hacia abajo.", d: "Solo sacudo el polvo por encima y ya está." },
+    { p: "Te equivocas en el cambio y el cliente avisa:", a: "Me disculpo con autoridad y corrijo al instante.", b: "Me río del error para quitarle importancia.", c: "Vuelvo a contar frente al cliente muy despacio.", d: "Me asusto mucho y empiezo a sudar del miedo." },
+    { p: "Ves que el jefe está muy estresado hoy:", a: "Le digo que yo me encargo de todo el piso ya.", b: "Le cuento un chiste o le traigo un café caliente.", c: "Le entrego los reportes del día sin hablarle.", d: "Me escondo para que no se desquite conmigo hoy." },
+    { p: "Tu reacción ante un cliente muy indeciso:", a: "Le elijo yo la prenda y cierro la venta ahora.", b: "Le tengo toda la paciencia del mundo sonriendo.", c: "Le doy una lista técnica de pros y contras.", d: "Espero que decida solo, yo no intervengo nada." },
+    { p: "Alguien dejó basura tirada en la tienda:", a: "La recojo molesto buscando quién fue el culpable.", b: "La recojo y la tiro al tacho sin decir nada.", c: "Llamo al personal de limpieza de inmediato.", d: "La pateo discretamente debajo de un mueble." },
+    { p: "Si el baño de tienda se quedó sin papel:", a: "Voy a bodega y pongo un rollo nuevo yo mismo.", b: "Le aviso a todo el equipo de forma graciosa.", c: "Reporto la falta de insumos al supervisor hoy.", d: "Espero a que alguien más note que no hay." },
+    { p: "Organizar un evento de ventas nocturno:", a: "Me aseguro de ser el que más facture esa noche.", b: "Soy el alma de la fiesta atendiendo a todos.", c: "Llevo el control estricto de los invitados hoy.", d: "Vengo solo porque me dijeron que es obligatorio." },
+    { p: "Cliente quiere probarse 20 pares de zapatos:", a: "Le traigo los 5 mejores y cierro la venta ya.", b: "Se los traigo todos y platicamos de cada uno.", c: "Los voy ordenando por modelo según se los quita.", d: "Me canso y pido que otro compañero me ayude." },
+    { p: "Prenda manchada de maquillaje en perchero:", a: "La saco y trato de limpiarla con mi técnica.", b: "Digo al equipo: 'Miren lo que hicieron hoy'.", c: "Hago un acta de merma por descuido de cliente.", d: "La pongo al final para que nadie la vea hoy." },
+    { p: "Tu opinión sobre las metas del mes:", a: "Son un piso bajo, yo siempre voy por el doble.", b: "Son muy divertidas si el equipo está unido.", c: "Son necesarias para medir mi eficiencia técnica.", d: "Son muy estresantes y preferiría no tenerlas." },
+    { p: "Cliente te pide que le mientas a su pareja:", a: "Le sigo el juego rápido para cerrar la venta.", b: "Me río mucho y me vuelvo su cómplice total.", c: "Me pongo serio y me enfoco solo en el ticket.", d: "Me da mucha vergüenza y prefiero retirarme." },
+    { p: "El piso de ventas está solo, sin clientes:", a: "Salgo a la calle de inmediato a jalar gente.", b: "Me pongo a ver tendencias de moda en mi cel.", c: "Hago un conteo ciego de toda la mercadería.", d: "Me quedo relajado esperando que entre alguien." },
+    { p: "Si Verssato fuera una persona, dirías que es:", a: "Un líder imparable, elegante y con autoridad.", b: "El amigo más cool, divertido y muy sociable.", c: "Alguien perfecto, ordenado y muy detallista.", d: "Alguien tranquilo que no molesta a nadie nunca." }
 ];
 
 function iniciarTest() {
@@ -393,30 +393,33 @@ function iniciarTest() {
     const container = document.getElementById('preguntas-container');
     container.innerHTML = "";
 
-    // 1. ELEGIR 20 AL AZAR DE LAS 100
-    const preguntasMezcladas = [...bancoPreguntas].sort(() => 0.5 - Math.random());
-    const seleccionadas = preguntasMezcladas.slice(0, 20);
+    // 1. Mezclamos el banco de 100 y tomamos solo 20
+    const seleccionadas = [...bancoPreguntas]
+        .sort(() => 0.5 - Math.random())
+        .slice(0, 20);
 
+    // 2. Las pintamos en el HTML
     seleccionadas.forEach((q, i) => {
-        // 2. MEZCLAR OPCIONES INTERNAS (C, S, M, F)
-        let opciones = [
-            { id: 'C', texto: q.c },
-            { id: 'S', texto: q.s },
-            { id: 'M', texto: q.m },
-            { id: 'F', texto: q.f }
-        ].sort(() => 0.5 - Math.random());
-
         let htmlPregunta = `
         <div class="pregunta-card">
-            <p>${i+1}. ${q.p}</p>
-            ${opciones.map(opt => `
-                <label class="opcion">
-                    <input type="radio" name="q${i}" value="${opt.id}" required> ${opt.texto}
-                </label>
-            `).join('')}
+            <p>${i + 1}. ${q.p}</p>
+            <label class="opcion">
+                <input type="radio" name="p${i}" value="a" required> ${q.a}
+            </label>
+            <label class="opcion">
+                <input type="radio" name="p${i}" value="b" required> ${q.b}
+            </label>
+            <label class="opcion">
+                <input type="radio" name="p${i}" value="c" required> ${q.c}
+            </label>
+            <label class="opcion">
+                <input type="radio" name="p${i}" value="d" required> ${q.d}
+            </label>
         </div>`;
         container.innerHTML += htmlPregunta;
     });
+
+    window.scrollTo(0, 0);
 }
 
 function mostrarLogin() {
@@ -530,7 +533,7 @@ async function enviarResultados() {
     const edad = document.getElementById('edad').value;
 
     if(!form.checkValidity() || !nombre || !sucursal || !correo) {
-        alert("Por favor completa todos los campos y responde las preguntas.");
+        alert("Por favor completa todos los campos y responde las 20 preguntas.");
         return;
     }
 
@@ -539,61 +542,81 @@ async function enviarResultados() {
 
     const fd = new FormData(form);
     let r = { C: 0, S: 0, M: 0, F: 0 };
-    for (let v of fd.values()) { r[v]++; }
 
-    // Porcentajes reales sobre 20 preguntas (o el total que tengas)
+    // --- MAPEO DE VALORES ---
+    for (let value of fd.values()) {
+        if (value === "a") r.C++;
+        else if (value === "b") r.S++;
+        else if (value === "c") r.M++;
+        else if (value === "d") r.F++;
+    }
+
     let totalPreguntas = Object.values(r).reduce((a, b) => a + b, 0);
+    
     let pcC = (r.C / totalPreguntas) * 100, 
         pcS = (r.S / totalPreguntas) * 100, 
         pcM = (r.M / totalPreguntas) * 100, 
         pcF = (r.F / totalPreguntas) * 100;
 
     let sorted = Object.entries(r).sort((a,b) => b[1] - a[1]);
-    let p1 = sorted[0][0]; // Dominante
-    let p2 = sorted[1][0]; // Secundario
-    let scoreVentas = pcC + pcS; // La "Fuerza de Venta" real (Colérico + Sanguíneo)
+    let p1 = sorted[0][0]; 
+    let p2 = sorted[1][0]; 
+    let combo = p1 + p2; 
 
-    // --- LÓGICA DE CALIFICACIÓN REALISTA ---
+    // --- TABLAS DE CÁLCULO BASE ---
+    const tablaVentas = {
+        "SF": 92, "SC": 88, "FS": 86, "CS": 84, "SM": 80, "FM": 76, "CM": 74, "MM": 62
+    };
+    let potencialVentas = tablaVentas[combo] || (p1 === 'M' ? 62 : 60);
+
+    const tablaLiderazgo = {
+        "CF": 94, "CS": 91, "CM": 89, "FC": 86, 
+        "SC": 84, "FM": 80, "SF": 78, "MC": 76 
+    };
+    let potencialLiderazgo = tablaLiderazgo[combo] || 0;
+
+    // --- LÓGICA DE DIAGNÓSTICO DE VENTAS (ACTUALIZADA) ---
     let diag = "";
-    
-    if (scoreVentas >= 80 && (p1 === 'C' || p1 === 'S')) {
-        diag = "VENDEDOR ELITE";
-    } 
-    else if (scoreVentas >= 60) {
-        diag = "BUEN VENDEDOR";
-    }
-    else if (p1 === 'M' || p1 === 'F') {
-        // Si el dominante es Melancólico o Flemático, aunque tenga buen puntaje,
-        // no puede ser "Buen Vendedor" de alto impacto.
-        diag = "VENDEDOR PROMEDIO / APOYO";
-    }
-    else if (scoreVentas < 40) {
-        diag = "MAL VENDEDOR / EVALUAR";
+    if (potencialVentas >= 90) diag = "VENDEDOR ELITE";
+    else if (potencialVentas >= 80) diag = "BUEN VENDEDOR";
+    else if (potencialVentas >= 70) diag = "VENDEDOR PROMEDIO";
+    else if (potencialVentas >= 60) diag = "MAL VENDEDOR / EVALUAR";
+    else diag = "NO APTO / POSIBLE DESPIDO";
+
+    // --- LÓGICA DE LIDERAZGO (FLEXIBILIDAD 3 NIVELES) ---
+    let liderazgo = "";
+    if (potencialLiderazgo >= 80) {
+        liderazgo = "APROBADO";
+    } else if (potencialLiderazgo >= 70) {
+        liderazgo = "POTENCIAL A DESARROLLAR";
     } else {
-        diag = "VENDEDOR PROMEDIO";
+        liderazgo = "NO APTO PARA MANDO";
     }
 
-    // --- REDACCIÓN DE ANÁLISIS (COLUMNA L - 5 LÍNEAS REQUERIDAS) ---
     const dict = {
-        'C': 'dominante, enfocado a resultados y con alta capacidad de mando bajo presión.',
-        'S': 'entusiasta, comunicativo y con gran habilidad para conectar emocionalmente con clientes.',
-        'M': 'analítico, detallista y orientado a procesos de calidad y orden riguroso.',
-        'F': 'paciente, estable y con tendencia a evitar conflictos, buscando la armonía en el equipo.'
+        'C': 'dominante, enfocado a resultados y con alta capacidad de mando.',
+        'S': 'entusiasta, comunicativo y con gran habilidad de conexión emocional.',
+        'M': 'analítico, detallista y orientado a procesos rigurosos.',
+        'F': 'paciente, estable y buscador de armonía en el equipo.'
     };
     
-    let analisisL = `El evaluado presenta un perfil con base en el temperamento ${p1 === 'C' ? 'Colérico' : p1 === 'S' ? 'Sanguíneo' : p1 === 'M' ? 'Melancólico' : 'Flemático'}, caracterizándose por ser ${dict[p1]} Su capacidad de venta combinada (C+S) es del ${scoreVentas.toFixed(0)}%, lo que define su nivel de agresividad comercial. Presenta una tendencia secundaria de tipo ${dict[p2]} Se recomienda su ubicación en el área de ${diag === 'VENDEDOR ELITE' || diag === 'BUEN VENDEDOR' ? 'Ventas Directas' : 'Operaciones o Atención'} para aprovechar sus habilidades naturales. Su desempeño a largo plazo dependerá de mantener su enfoque en ${p1 === 'C' || p1 === 'S' ? 'el cierre de ventas' : 'la organización y soporte'}.`;
+    let analisisL = `Análisis Profesional Verssato: El evaluado presenta una combinación tipo ${p1+p2}. Posee un potencial comercial del ${potencialVentas}% y un índice de liderazgo del ${potencialLiderazgo}%. Su temperamento base es ${p1 === 'C' ? 'Colérico' : p1 === 'S' ? 'Sanguíneo' : p1 === 'M' ? 'Melancólico' : 'Flemático'}, lo que lo define como alguien ${dict[p1]} Esta estructura sugiere un desempeño como ${diag}. Su capacidad para dirigir equipos se encuentra en estado ${liderazgo}.`;
 
-    // --- LIDERAZGO (COLUMNA M) ---
-    // Solo aprueba liderazgo si tiene Empuje (C) o Influencia (S) y poco miedo al conflicto.
-    let liderazgo = (pcC >= 30 || (pcC + pcS >= 70)) ? "APROBADO" : "DENEGADO";
-
-    // --- REASIGNACIÓN (COLUMNA N) ---
+    // --- REASIGNACIÓN (MÁS INTELIGENTE) ---
     let reasignacion = "";
-    if (diag.includes("ELITE")) reasignacion = "LIDERAZGO DE VENTAS / CIERRES";
-    else if (diag === "BUEN VENDEDOR") reasignacion = "VENTAS DE PISO";
-    else if (p1 === 'M') reasignacion = "BODEGA / CONTROL DE INVENTARIO";
-    else if (p1 === 'F') reasignacion = "CAJA / ATENCIÓN AL CLIENTE";
-    else reasignacion = "OPERACIONES GENERALES";
+    if (liderazgo === "APROBADO") {
+        reasignacion = "ENCARGADO DE TIENDA / LÍDER";
+    } else if (liderazgo === "POTENCIAL A DESARROLLAR") {
+        reasignacion = "SUB-ENCARGADO / LÍDER EN FORMACIÓN";
+    } else if (diag === "VENDEDOR ELITE" || diag === "BUEN VENDEDOR") {
+        reasignacion = "VENTAS DE PISO";
+    } else if (p1 === 'M') {
+        reasignacion = "BODEGA / AUDITORÍA";
+    } else if (p1 === 'F') {
+        reasignacion = "ATENCIÓN AL CLIENTE / POST-VENTA";
+    } else {
+        reasignacion = "CAJA / APOYO";
+    }
 
     const payload = {
         Nombre: nombre, Edad: edad, Ciudad: "ECUADOR", Sucursal: sucursal, Correo: correo,
@@ -602,7 +625,13 @@ async function enviarResultados() {
     };
 
     try {
-        await fetch(scriptURL, { method: 'POST', mode: 'no-cors', body: JSON.stringify(payload) });
+        await fetch(scriptURL, { 
+            method: 'POST', 
+            mode: 'no-cors', 
+            body: JSON.stringify(payload),
+            headers: { 'Content-Type': 'application/json' }
+        });
+        
         setTimeout(() => {
             document.getElementById('evaluacion-section').style.display = 'none';
             document.getElementById('mensaje-final').style.display = 'block';

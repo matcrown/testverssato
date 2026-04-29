@@ -654,7 +654,6 @@ async function enviarResultados() {
     const fd = new FormData(form);
     let r = { C: 0, S: 0, M: 0, F: 0 };
 
-    // --- MAPEO DE VALORES ---
     for (let value of fd.values()) {
         if (value === "a") r.C++;
         else if (value === "b") r.S++;
@@ -674,7 +673,6 @@ async function enviarResultados() {
     let p2 = sorted[1][0]; 
     let combo = p1 + p2; 
 
-    // --- TABLAS DE CÁLCULO BASE ---
     const tablaVentas = {
         "SF": 92, "SC": 88, "FS": 86, "CS": 84, "SM": 80, "FM": 76, "CM": 74, "MM": 62
     };
@@ -686,15 +684,29 @@ async function enviarResultados() {
     };
     let potencialLiderazgo = tablaLiderazgo[combo] || 0;
 
-    // --- LÓGICA DE DIAGNÓSTICO DE VENTAS (ACTUALIZADA) ---
+    // --- NUEVA LÓGICA DE DIAGNÓSTICO CON FILTROS DE SEGURIDAD (REGLAS DEL JEFE) ---
     let diag = "";
+    let notaFiltro = "";
+
+    // 1. Asignación inicial por puntaje
     if (potencialVentas >= 90) diag = "VENDEDOR ELITE";
     else if (potencialVentas >= 80) diag = "BUEN VENDEDOR";
     else if (potencialVentas >= 70) diag = "VENDEDOR PROMEDIO";
     else if (potencialVentas >= 60) diag = "MAL VENDEDOR / EVALUAR";
     else diag = "NO APTO / POSIBLE DESPIDO";
 
-    // --- LÓGICA DE LIDERAZGO (FLEXIBILIDAD 3 NIVELES) ---
+    // 2. Filtro Sanguíneo < 40% (Baja a Promedio)
+    if ((diag === "VENDEDOR ELITE" || diag === "BUEN VENDEDOR") && pcS < 40) {
+        diag = "VENDEDOR PROMEDIO";
+        notaFiltro = " (Rebajado: Sanguíneo menor al 40%)";
+    }
+
+    // 3. Filtro Sanguíneo < 20% (Baja a Mal Vendedor sin importar lo demás)
+    if (pcS < 20) {
+        diag = "MAL VENDEDOR / EVALUAR";
+        notaFiltro = " (Rebajado: Sanguíneo menor al 20%)";
+    }
+
     let liderazgo = "";
     if (potencialLiderazgo >= 80) {
         liderazgo = "APROBADO";
@@ -711,9 +723,8 @@ async function enviarResultados() {
         'F': 'paciente, estable y buscador de armonía en el equipo.'
     };
     
-    let analisisL = `Análisis Profesional Verssato: El evaluado presenta una combinación tipo ${p1+p2}. Posee un potencial comercial del ${potencialVentas}% y un índice de liderazgo del ${potencialLiderazgo}%. Su temperamento base es ${p1 === 'C' ? 'Colérico' : p1 === 'S' ? 'Sanguíneo' : p1 === 'M' ? 'Melancólico' : 'Flemático'}, lo que lo define como alguien ${dict[p1]} Esta estructura sugiere un desempeño como ${diag}. Su capacidad para dirigir equipos se encuentra en estado ${liderazgo}.`;
+    let analisisL = `Análisis Profesional Verssato: El evaluado presenta una combinación tipo ${p1+p2}. Potencial comercial: ${potencialVentas}%. Sanguíneo: ${pcS.toFixed(0)}%. Liderazgo: ${potencialLiderazgo}%. Perfil ${p1 === 'C' ? 'Colérico' : p1 === 'S' ? 'Sanguíneo' : p1 === 'M' ? 'Melancólico' : 'Flemático'}, definido como alguien ${dict[p1]} Resultado final: ${diag}${notaFiltro}. Liderazgo: ${liderazgo}.`;
 
-    // --- REASIGNACIÓN (MÁS INTELIGENTE) ---
     let reasignacion = "";
     if (liderazgo === "APROBADO") {
         reasignacion = "ENCARGADO DE TIENDA / LÍDER";
@@ -721,7 +732,7 @@ async function enviarResultados() {
         reasignacion = "SUB-ENCARGADO / LÍDER EN FORMACIÓN";
     } else if (diag === "VENDEDOR ELITE" || diag === "BUEN VENDEDOR") {
         reasignacion = "VENTAS DE PISO";
-    } else if (p1 === 'M') {
+    } else if (p1 === 'M' || pcS < 20) { // Si tiene poco sanguíneo, mejor a bodega
         reasignacion = "BODEGA / AUDITORÍA";
     } else if (p1 === 'F') {
         reasignacion = "ATENCIÓN AL CLIENTE / POST-VENTA";

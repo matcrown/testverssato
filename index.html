@@ -597,7 +597,7 @@ function abrirIA(nombre, res, c, s, m, f, lider, reasig) {
             "Solicitar feedback al supervisor tras cada cierre fallido.",
             "Mantener el orden de los probadores cada 30 minutos."
         ],
-        'MAL VENDEDOR / EVALUAR': [
+        'MAL VENDEDOR': [
             "Entrevista de compromiso con gerencia sobre metas mínimas.",
             "Tarea estricta de ordenamiento de perchas por color y talla.",
             "Curso intensivo de atención al cliente básico.",
@@ -622,7 +622,7 @@ function abrirIA(nombre, res, c, s, m, f, lider, reasig) {
     let htmlContenido = `
         <div style="background: #fdf2f2; padding: 15px; border-radius: 10px; border-left: 5px solid #e74c3c; margin-bottom: 20px;">
             <p><strong>ESTADO ACTUAL:</strong> <span style="color:#e74c3c;">${res}</span></p>
-            <p><strong>LIDERAZGO:</strong> ${lider === 'APROBADO' ? '✅ APROBADO' : '❌ DENEGADO'}</p>
+            <p><strong>LIDERAZGO:</strong> ${lider === 'LIDERAZGO TOP / E.T','APTO PARA LIDERAR / E.T' ? '✅ APROBADO' : '❌ DENEGADO'}</p>
             <p><strong>REASIGNACIÓN SUGERIDA:</strong> ${reasig}</p>
         </div>
         <p><strong>RESUMEN PSICOLÓGICO:</strong> El colaborador demuestra ${personalidad} Su combinación de puntajes (C:${c}% S:${s}% M:${m}% F:${f}%) indica que su mayor potencial se encuentra en <strong>${reasig}</strong>.</p>
@@ -667,7 +667,6 @@ async function enviarResultados() {
     }
 
     let totalPreguntas = Object.values(r).reduce((a, b) => a + b, 0);
-    
     let pcC = (r.C / totalPreguntas) * 100, 
         pcS = (r.S / totalPreguntas) * 100, 
         pcM = (r.M / totalPreguntas) * 100, 
@@ -676,73 +675,51 @@ async function enviarResultados() {
     let sorted = Object.entries(r).sort((a,b) => b[1] - a[1]);
     let p1 = sorted[0][0]; 
     let p2 = sorted[1][0]; 
-    let combo = p1 + p2; 
-
-    const tablaVentas = {
-        "SF": 92, "SC": 88, "FS": 86, "CS": 84, "SM": 80, "FM": 76, "CM": 74, "MM": 62
-    };
-    let potencialVentas = tablaVentas[combo] || (p1 === 'M' ? 62 : 60);
-
-    const tablaLiderazgo = {
-        "CF": 94, "CS": 91, "CM": 89, "FC": 86, 
-        "SC": 84, "FM": 80, "SF": 78, "MC": 76 
-    };
-    let potencialLiderazgo = tablaLiderazgo[combo] || 0;
-
-    // --- NUEVA LÓGICA DE DIAGNÓSTICO CON FILTROS DE SEGURIDAD (REGLAS DEL JEFE) ---
-    let diag = "";
-    let notaFiltro = "";
-
-    // 1. Asignación inicial por puntaje
-    if (potencialVentas >= 90) diag = "VENDEDOR ELITE";
-    else if (potencialVentas >= 80) diag = "BUEN VENDEDOR";
-    else if (potencialVentas >= 70) diag = "VENDEDOR PROMEDIO";
-    else if (potencialVentas >= 60) diag = "MAL VENDEDOR / EVALUAR";
-    else diag = "NO APTO / POSIBLE DESPIDO";
-
-    // 2. Filtro Sanguíneo < 40% (Baja a Promedio)
-    if ((diag === "VENDEDOR ELITE" || diag === "BUEN VENDEDOR") && pcS < 40) {
-        diag = "VENDEDOR PROMEDIO";
-        notaFiltro = " (Rebajado: Sanguíneo menor al 40%)";
-    }
-
-    // 3. Filtro Sanguíneo < 20% (Baja a Mal Vendedor sin importar lo demás)
-    if (pcS < 20) {
-        diag = "MAL VENDEDOR / EVALUAR";
-        notaFiltro = " (Rebajado: Sanguíneo menor al 20%)";
-    }
-
-    let liderazgo = "";
-    if (potencialLiderazgo >= 87) {
-        liderazgo = "APROBADO";
-    } else if (potencialLiderazgo >= 81) {
-        liderazgo = "POTENCIAL A DESARROLLAR";
-    } else {
-        liderazgo = "NO APTO PARA MANDO";
-    }
-
-    const dict = {
-        'C': 'dominante, enfocado a resultados y con alta capacidad de mando.',
-        'S': 'entusiasta, comunicativo y con gran habilidad de conexión emocional.',
-        'M': 'analítico, detallista y orientado a procesos rigurosos.',
-        'F': 'paciente, estable y buscador de armonía en el equipo.'
-    };
     
-    let analisisL = `Análisis Profesional Verssato: El evaluado presenta una combinación tipo ${p1+p2}. Potencial comercial: ${potencialVentas}%. Sanguíneo: ${pcS.toFixed(0)}%. Liderazgo: ${potencialLiderazgo}%. Perfil ${p1 === 'C' ? 'Colérico' : p1 === 'S' ? 'Sanguíneo' : p1 === 'M' ? 'Melancólico' : 'Flemático'}, definido como alguien ${dict[p1]} Resultado final: ${diag}${notaFiltro}. Liderazgo: ${liderazgo}.`;
+    const mP = { 'C': 'COLERICO', 'S': 'SANGUINEO', 'M': 'MELANCOLICO', 'F': 'FLEMATICO' };
+    let comboStr = `${mP[p1]} Y ${mP[p2]}`;
 
+    // --- TABLA DE VENTAS SEGÚN CUADRO ---
+    const tablaVentas = {
+        "SANGUINEO Y FLEMATICO": "VENDEDOR ELITE",
+        "SANGUINEO Y COLERICO": "BUEN VENDEDOR",
+        "FLEMATICO Y SANGUINEO": "BUEN VENDEDOR",
+        "COLERICO Y SANGUINEO": "VENDEDOR PROMEDIO",
+        "SANGUINEO Y MELANCOLICO": "VENDEDOR PROMEDIO",
+        "COLERICO Y FLEMATICO": "VENDEDOR PROMEDIO",
+        "MELANCOLICO Y COLERICO": "MAL VENDEDOR",
+        "COLERICO Y MELANCOLICO": "MAL VENDEDOR",
+        "MELANCOLICO Y SANGUINEO": "MAL VENDEDOR",
+        "FLEMATICO Y COLERICO": "MAL VENDEDOR",
+        "MELANCOLICO Y FLEMATICO": "NO CONTRATAR",
+        "FLEMATICO Y MELANCOLICO": "NO CONTRATAR"
+    };
+    let diag = tablaVentas[comboStr] || "MAL VENDEDOR";
+
+    // --- TABLA DE LIDERAZGO SEGÚN CUADRO ---
+    const tablaLiderazgo = {
+        "FLEMATICO Y SANGUINEO": "LIDERAZGO TOP/E.T",
+        "COLERICO Y SANGUINEO": "LIDERAZGO TOP/E.T",
+        "COLERICO Y FLEMATICO": "DESARROLLAR LIDERAZGO",
+        "MELANCOLICO Y COLERICO": "APTO PARA LIDERAR/E.T",
+        "COLERICO Y MELANCOLICO": "APTO PARA LIDERAR/E.T"
+    };
+    let liderazgo = tablaLiderazgo[comboStr] || "NO APTO PARA MANDO";
+
+    // --- ANÁLISIS IA (COLUMNA L) ---
+    let analisisL = `Perfil: ${comboStr}. El evaluado clasifica como ${diag} en el área comercial. 
+Su potencial de gestión es ${liderazgo}. Se recomienda ${p1 === 'S' ? 'enfoque en cierre' : 'enfoque en procesos'}. 
+Análisis nacional: Apto para ${liderazgo.includes('E.T') ? 'supervisión de tienda' : 'apoyo operativo'}. 
+Estrategia: Monitorear cumplimiento de metas y comisiones de forma inmediata.`;
+
+    // --- DETERMINAR REASIGNACIÓN ---
     let reasignacion = "";
-    if (liderazgo === "APROBADO") {
+    if (liderazgo.includes("E.T") || liderazgo.includes("ENCARGADO")) {
         reasignacion = "ENCARGADO DE TIENDA / LÍDER";
-    } else if (liderazgo === "POTENCIAL A DESARROLLAR") {
-        reasignacion = "SUB-ENCARGADO / LÍDER EN FORMACIÓN";
     } else if (diag === "VENDEDOR ELITE" || diag === "BUEN VENDEDOR") {
         reasignacion = "VENTAS DE PISO";
-    } else if (p1 === 'M' || pcS < 20) { // Si tiene poco sanguíneo, mejor a bodega
-        reasignacion = "BODEGA / AUDITORÍA";
-    } else if (p1 === 'F') {
-        reasignacion = "ATENCIÓN AL CLIENTE / POST-VENTA";
     } else {
-        reasignacion = "CAJA / APOYO";
+        reasignacion = "BODEGA / APOYO";
     }
 
     const payload = {

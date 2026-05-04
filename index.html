@@ -262,7 +262,7 @@
                     <th>Nombre</th>
                     <th>Resultado</th>
                     <th>Tienda</th>
-                    <th>Entrenamiento</th>
+                    <th>Analisis</th>
                 </tr>
             </thead>
             <tbody id="cuerpo-tabla"></tbody>
@@ -557,7 +557,7 @@ async function cargarBaseDatos() {
         const cuerpo = document.getElementById('cuerpo-tabla');
         cuerpo.innerHTML = "";
         json.data.forEach(fila => {
-            cuerpo.innerHTML += `<tr><td>${fila[1]}</td><td><strong>${fila[6]}</strong></td><td>${fila[4]}</td><td><span class="ia-bot" onclick="abrirIA('${fila[1]}','${fila[6]}',${fila[7]},${fila[8]},${fila[9]},${fila[10]},'${fila[12]}','${fila[13]}')">Consejos</span></td></tr>`;
+            cuerpo.innerHTML += `<tr><td>${fila[1]}</td><td><strong>${fila[6]}</strong></td><td>${fila[4]}</td><td><span class="ia-bot" onclick="abrirIA('${fila[1]}','${fila[6]}',${fila[7]},${fila[8]},${fila[9]},${fila[10]},'${fila[12]}','${fila[13]}')">📊</span></td></tr>`;
         });
         document.getElementById('login-section').style.display = 'none';
         document.getElementById('admin-panel').style.display = 'block';
